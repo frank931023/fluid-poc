@@ -1,7 +1,19 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+// import { NodeGlobalsPolyfill } from '@esbuild-plugins/node-globals-polyfill';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
-})
+  // optimizeDeps: {
+  //   esbuildOptions: {
+  //     define: {
+  //       global: 'globalThis'
+  //     },
+  //     plugins: [
+  //       NodeGlobalsPolyfill({
+  //         buffer: true
+  //       })
+  //     ]
+  //   }
+  // }
+});

@@ -56,7 +56,7 @@ async function main() {
 
   // Deploy RwaNft
   const RwaNft = await ethers.getContractFactory("RwaNft");
-  const rwaNft = await RwaNft.connect(owner).deploy();
+  const rwaNft = await RwaNft.connect(owner).deploy(owner.address);
   await waitDeployed(rwaNft);
 
   // Deploy LendingPool (pass addresses)
